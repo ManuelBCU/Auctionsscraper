@@ -12,7 +12,7 @@ record = {}
 
 for li in matchedlinks:
   listtext = li.text_content()
-  print(listtext)
+  print(listtext.encode('utf-8'))
   record['address'] = listtext
   scraperwiki.sqlite.save(['address'],record)
   
