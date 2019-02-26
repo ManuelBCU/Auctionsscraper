@@ -5,6 +5,8 @@ html = scraperwiki.scrape("https://www.sdlauctions.co.uk/property-list/")
 
 root = lxml.html.fromstring(html)
 root.cssselect("li p a")
+matchedlinks=root.cssselect("li p a")
+print(matchedlinks)
 #
 # # Write out to the sqlite database using scraperwiki library
 # scraperwiki.sqlite.save(unique_keys=['name'], data={"name": "susan", "occupation": "software developer"})
