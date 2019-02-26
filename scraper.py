@@ -7,7 +7,10 @@ root = lxml.html.fromstring(html)
 root.cssselect("li p a")
 matchedlinks=root.cssselect("li p a")
 print(matchedlinks)
-#
+
+for li in matchedlinks:
+  listtext = li.text_content()
+  print(listtext)
 # # Write out to the sqlite database using scraperwiki library
 # scraperwiki.sqlite.save(unique_keys=['name'], data={"name": "susan", "occupation": "software developer"})
 #
