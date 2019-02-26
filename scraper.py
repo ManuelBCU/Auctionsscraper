@@ -8,9 +8,14 @@ root.cssselect("li p a")
 matchedlinks=root.cssselect("li p a")
 print(matchedlinks)
 
+record = {}
+
 for li in matchedlinks:
   listtext = li.text_content()
   print(listtext)
+  record['address'] = listtext
+  scraperwiki.sqlite.save(['address'],record)
+  
 # # Write out to the sqlite database using scraperwiki library
 # scraperwiki.sqlite.save(unique_keys=['name'], data={"name": "susan", "occupation": "software developer"})
 #
