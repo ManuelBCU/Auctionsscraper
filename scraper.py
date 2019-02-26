@@ -1,5 +1,5 @@
 import scraperwiki
-import lxml.
+import lxml.html
 
 html = scraperwiki.scrape("https://www.sdlauctions.co.uk/property-list/")
 
